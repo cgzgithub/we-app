@@ -1,0 +1,60 @@
+.process-list{
+  padding: 24rpx 16rpx;
+  margin: 24rpx auto;
+  background:rgba(255,255,255,1);
+  box-shadow:2px 6px 12px 0px rgba(0,0,0,0.08);
+  border-radius:8px;
+  box-sizing: border-box;
+  width: 686rpx;
+  font-size: 24rpx;
+  color:rgba(15,30,62,0.5);
+}
+.process-list-tit{
+  margin-bottom: 20rpx;
+}
+.process-list-tit image{
+  width: 48rpx;
+  height: 48rpx;
+  flex: 0 0 48rpx;
+  margin-right: 12rpx;
+
+}
+.process-list-tit-name{
+font-size: 32rpx;
+font-weight: bold;
+margin-right: 8rpx;
+color: rgba(15,30,62,1);
+} 
+.process-list-des{
+  line-height: 48rpx;
+}
+.process-list-des image{
+  width: 32rpx;
+  height: 32rpx;
+  flex: 0 0 32rpx;
+  margin-right: 12rpx;
+  margin-left: 8rpx;
+}
+.process-list-des-r{
+  color:rgba(15,30,62,1);
+  font-weight: bold;
+}
+.process-list-tit-r{
+  padding: 0rpx 12rpx;
+  background:rgba(190,209,249,0.24);
+border-radius:8px;
+box-sizing: border-box;
+font-size: 26rpx;
+height: 44rpx;
+line-height: 44rpx;
+color: #3574FF;
+}
+.process-list-tit-r text{
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-right: 8rpx;
+}
+.process-list-tit-r.finish{
+  color: #0A961D;
+  background: rgba(126,230,140,0.24);
+}

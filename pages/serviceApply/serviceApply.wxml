@@ -1,0 +1,25 @@
+
+
+<image class="apply-top-bg" src="/images/apply-top-bg.png"></image>
+<view class="top-tip">请选择您的服务类型</view>
+<view class="content">
+
+  <view class="card" bindtap="serviceSubmit">
+    <view class="panel-between2">
+      <image src="/images/apply-icon1.png"></image>故障报修</view>
+    <image src="/images/arrow-r.png"></image>
+  </view>
+
+  <view class="card" bindtap="serviceSubmit">
+    <view class="panel-between2">
+      <image src="/images/apply-icon2.png"></image>服务预约</view>
+    <image src="/images/arrow-r.png"></image>
+  </view>
+  <view class="card" bindtap="serviceSubmit">
+   <!-- <view class="card" bindtap="address"> -->
+    <view class="panel-between2">
+      <image src="/images/apply-icon3.png"></image>疑难解答</view>
+    <image src="/images/arrow-r.png"></image>
+  </view>
+
+</view>

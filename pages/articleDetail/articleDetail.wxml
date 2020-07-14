@@ -1,0 +1,14 @@
+<import src="../../wxParse/wxParse.wxml"></import>
+<image class="article-img" mode="widthFix" src="{{detail.image_url}}"></image>
+<view class="article-infos">
+	<view class="article-tit">{{detail.article_title}}</view>
+	<view class="article-info">
+		<view class="article-time">{{detail.view_time}}</view>
+		<view class="article-views" ><image src="/images/icon-views.png"></image> 123</view>
+		<image class="article-icon" src="{{IsCollect ? '/images/icon-collected.png' : '/images/icon-collect.png'}}" bindtap="{{IsCollect ? 'canelCollect' : 'collect'}}"></image>
+	</view>
+</view>
+<view class='content'>
+	<!-- <template is="wxParse" data="{{ wxParseData:contentT.nodes }}"></template> -->
+	<rich-text nodes="{{nodes}}"></rich-text>
+</view>

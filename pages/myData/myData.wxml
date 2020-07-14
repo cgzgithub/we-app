@@ -1,0 +1,19 @@
+<view class="search">
+    <view class='b_center_search'>
+      <image src='../../images/search.png' class='p_search_img'></image>
+      <input class='p_search_input' style="width:100%;"  maxlength='40' value="{{search}}" bindinput="searchInput" placeholder='请输入您要搜索的内容' confirm-type="search" bindconfirm="searchShop"></input>
+    </view>
+</view>
+
+<view class="lists">
+	<view class="list" wx:for="{{lists}}" wx:key="index" data-id="{{item.article_id}}" bindtap="goDetail">
+		<image class="list-img" src="/images/cover-img.png" mode="aspectFill"></image>
+		<view class="list-content">
+			<view class="list-title onelist-hidden">{{item.article_title}}
+			</view>
+			<view class="list-time">{{item.view_time}}</view>
+
+		</view>
+	</view>
+  <view class="no-list" wx:if="{{lists.length == 0}}">暂无相关数据</view>
+</view>

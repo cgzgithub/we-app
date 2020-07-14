@@ -1,0 +1,23 @@
+<!--pages/auth/auth.wxml-->
+
+<view class="">
+  <view class="panel-center" style="min-height:400rpx">
+    <image class="logo" src="/images/exam-bg.png"></image>
+  </view>
+  <view class="tabCheck panel-between fo-32">
+    <view class="tabItem {{current==1?'active':''}}" data-id="1" bindtap="checkTab">员工手机号登录</view>
+    <view class="tabItem {{current==2?'active':''}}" data-id="2" bindtap="checkTab">员工账号密码登录</view>
+  </view>
+  <view class="border"></view>
+  <view class="mobileLogin fo-32 fo-w" wx:if="{{current==1}}">
+    <view>员工手机号登录</view>
+    <button class="auth_Btn" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"></button>
+  </view>
+  <view class="userLogin" wx:if="{{current==2}}">
+    <input class="user inpItem" bindinput="userInp" placeholder="请输入账号"></input>
+    <input class="psd inpItem" type="password" bindinput="psdInp" style="margin-top:30rpx;" placeholder="请输入密码"></input>
+    <view class="login" bindtap="login">登录</view>
+  </view>
+
+</view>
+

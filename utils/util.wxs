@@ -1,0 +1,11 @@
+var getSub = function (str,num) {
+  if(str){
+    if (num > str.length) {
+      return num
+    }
+    return str.slice(num)
+  }
+  
+}
+
+module.exports.getSub = getSub;

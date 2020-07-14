@@ -1,0 +1,53 @@
+<view class="search">
+	<view class="cate {{selectCate == 0 ? 'cate-active' : ''}}" data-cate="0" bindtap="changeCate">
+		IT新闻
+	</view>
+	<view class="cate {{selectCate == 1 ? 'cate-active' : ''}}" data-cate="1" bindtap="changeCate">
+		IT知识库
+	</view>
+	<view class='b_center_search'>
+		<image src='../../images/search.png' class='p_search_img'></image>
+		<input class='p_search_input' style="width:100%;" maxlength='40' value="{{search}}" bindinput="searchInput" placeholder='请输入您要搜索的内容' confirm-type="search" bindconfirm="searchShop"></input>
+	</view>
+</view>
+
+<view class="lists" wx:if="{{selectCate == 0}}">
+	<view class="list-one" wx:for="{{lists}}" wx:key="index" data-id="{{item.article_id}}" bindtap="goDetail">
+		<image class="list-one-img" src="/images/cover-img.png" mode="aspectFill"></image>
+		<view class="list-one-content">
+			<view style="min-height:148rpx">
+				<view class="list-one-title twolist-hidden">{{item.article_title}}
+				</view>
+				<view class="list-one-des twolist-hidden">{{item.article_title}}
+				</view>
+			</view>
+			<view class="list-one-bot">
+				<view class="list-one-time">{{item.view_time}}</view>
+				<view class="list-one-time">
+					<image src="/images/icon-views.png"></image>999
+				</view>
+			</view>
+		</view>
+		<image class="list-collect" src="/images/icon-collect.png"></image>
+	</view>
+	<view class="no-list" wx:if="{{lists.length == 0}}">暂无相关数据</view>
+</view>
+<view class="lists" wx:if="{{selectCate == 1}}">
+	<view class="list-two" wx:for="{{lists}}" wx:key="index" data-id="{{item.article_id}}" bindtap="goDetail">
+		<image class="list-two-img" src="/images/cover-img.png" mode="aspectFill"></image>
+
+		<view class="list-two-content">
+			<view class="list-two-title onelist-hidden">{{item.article_title}}222
+			</view>
+			<view class="list-two-bot">
+				<view class="list-two-type" wx:if="{{item.category.name}}">{{item.category.name}}</view>
+				<view class="list-one-time">
+					<image src="/images/icon-views.png"></image>999
+				</view>
+
+			</view>
+		</view>
+			<image class="list-collect" src="/images/icon-collected.png"></image>
+	</view>
+	<view class="no-list" wx:if="{{lists.length == 0}}">暂无相关数据</view>
+</view>

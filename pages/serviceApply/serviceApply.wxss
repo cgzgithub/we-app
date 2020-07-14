@@ -1,0 +1,49 @@
+
+.card{
+  box-shadow:0px 12rpx 32rpx 0px rgba(0,0,0,0.08);
+  padding: 0rpx 32rpx;
+  background:rgba(255,255,255,1);
+border-radius:8px;
+width: 686rpx;
+  margin: 32rpx auto;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  box-sizing: border-box;
+  position: relative;
+}
+.card image{
+  width: 48rpx;
+  height: 48rpx;
+  
+}
+.panel-between2 image{
+  width: 132rpx;
+  height: 132rpx;
+margin-right: 20rpx;
+}
+
+.panel-between2{
+  height:200rpx;
+display: flex;
+align-items: center;
+justify-content: space-between;
+flex: 1;
+padding-right: 16rpx;
+font-weight: bold;
+}
+
+.apply-top-bg{
+  margin: 32rpx;
+  width: 686rpx;
+  height: 258rpx;
+}
+.top-tip{
+  margin: 36rpx auto 46rpx auto;
+  font-size: 28rpx;
+  color: #0F1E3E;
+  font-weight: bold;
+  text-align: center;
+}

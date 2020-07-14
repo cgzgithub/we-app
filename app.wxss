@@ -1,0 +1,42 @@
+@import "/utils/common.wxss";
+page{
+  background: #F5F5F7;
+}
+.user-type{
+  position: relative;
+  width: 128rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+  color:rgba(80,158,197,1);
+  font-size: 18rpx;
+  display: inline-block;
+  padding-left: 24rpx;
+  box-sizing: border-box;
+  text-align: center;
+  z-index: 2;
+}
+.user-type image{
+  position: absolute;
+  width: 128rpx;
+  height: 28rpx;
+  top: 0rpx;
+  left: 0rpx;
+  z-index: -1;
+}
+.top-bg{
+  position: absolute;
+  top: 0rpx;
+  left: 0rpx;
+  width: 750rpx;
+  z-index: -1;
+}
+.panel-between{
+  display: flex;
+  justify-content: space-between;
+}
+.no-list{
+  text-align: center;
+  margin: 200rpx auto;
+  font-size: 26rpx;
+  color: #999;
+}

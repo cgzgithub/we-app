@@ -1,0 +1,22 @@
+<view class="main-tit">管理团队</view>
+<scroll-view class="scroll-view_H" scroll-x>
+	<view class="list-x" wx:for="{{lists}}" wx:key="index">
+		<image class="list-avatar" src="/images/check.png"></image>
+		<view class="list-x-name onelist-hidden">Phakamile Sikali</view>
+		<view class="list-x-name-cn">秦承志</view>
+    <view>
+		<view class="list-x-job">采购经理</view>
+    </view>
+		<view class="list-contact" data-phone="123456" bindtap="call">联系我</view>
+	</view>
+</scroll-view>
+<view class="main-tit">技术支持团队</view>
+	<view class="list-y dis-flex " wx:for="{{lists}}" wx:key="index">
+		<image class="list-avatar" src="/images/check.png"></image>
+		<view class="list-y-right">
+    <view class="list-y-name onelist-hidden">Phakamile Sikali<text class="list-y-name-cn">秦承志</text></view>
+		<view class="list-y-job">采购经理</view>
+		<view class="list-contact" data-phone="123456" bindtap="call">联系我</view>
+    </view>
+    <view class="list-zan"><image src="{{index == 1 ? '/images/icon-zan.png' : '/images/icon-zan2.png'}}"></image> 15</view>
+	</view>

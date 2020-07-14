@@ -1,0 +1,192 @@
+
+<view>
+		{{formTag}}
+	<van-button>van按钮</van-button>
+	<van-field wx:for="{{inputArr}}" wx:key="index"
+    value="{{ item.value }}"
+    placeholder="请输入"
+    border="{{ false }}"
+    bind:change="onChange"
+  	/>
+	  <van-radio-group value="{{ item.name }}" wx:for="{{radioArr}}" wx:key="index" bind:change="radioChange" id="{{item.id}}">
+		<van-radio name="{{ item.value }}" wx:for="{{item.dicData}}" wx:key="index">{{item.label}}</van-radio>
+		</van-radio-group>
+	  <van-rate wx:for="{{rateArr}}" wx:key="index">rate</van-rate>
+	  <van-slider>slider</van-slider>
+	  <van-checkbox value="{{ checked }}" >复选框</van-checkbox>
+	  <view wx:for="{{selectArr}}" wx:key="index" bindtap="showPicker" id="{{item.id}}">
+	  {{item.label}}
+		<van-picker  columns="{{ item.dicData }}" bind:change="pickerchange">picker</van-picker>
+	  </view>
+	  
+	  <van-tree-select
+		id="{{item.id}}"
+	  	wx:for="{{treeArr}}" wx:key="index"
+	  	items="{{ item.dicData }}"
+		main-active-index="{{ item.mainActiveIndex }}"
+		active-id="{{ item.activeId }}"
+		bind:click-nav="onClickNav"
+		bind:click-item="onClickItem"
+	  />
+</view>
+
+<view class="search">
+	<view class="cate {{selectCate == 0 ? 'cate-active' : ''}}" data-cate="0" bindtap="changeCate">
+		推荐
+	</view>
+	<view class="cate {{selectCate == 1 ? 'cate-active' : ''}}" data-cate="1" bindtap="changeCate">
+		报表
+	</view>
+	<view class='b_center_search'>
+		<image src='../../images/search.png' class='p_search_img'></image>
+		<input class='p_search_input' style="width:100%;" maxlength='40' value="{{search}}" bindinput="searchInput" placeholder='请输入您要搜索的内容' confirm-type="search" bindconfirm="searchShop"></input>
+	</view>
+	<view class="icon-msg" bindtap="goMsg">
+		<image src="/images/index-icon-msg.png"></image>
+	</view>
+</view>
+
+<view class="lists" wx:if="{{selectCate == 0}}">
+	<view class="swiper-container">
+		<swiper autoplay="{{isAutoplay}}" class="swiper">
+			<block wx:for="{{slide}}" wx:key="index">
+				<swiper-item>
+					<image mode="aspectFill" src="{{item}}" class="img"></image>
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+	<view class="main-btns icons-wrap">
+		<view class="icon">
+			<image src="/images/index-icon1.png"></image>
+			<view>新闻咨询</view>
+		</view>
+		<view class="icon">
+			<image src="/images/index-icon1.png"></image>
+			<view>新闻咨询</view>
+		</view>
+		<view class="icon">
+			<image src="/images/index-icon1.png"></image>
+			<view>新闻咨询</view>
+		</view>
+		<view class="icon">
+			<image src="/images/index-icon1.png"></image>
+			<view>新闻咨询</view>
+		</view>
+		<view class="icon">
+			<image src="/images/index-icon1.png"></image>
+			<view>新闻咨询</view>
+		</view>
+	</view>
+	<view class="main-tit" bindtap="serviceApply">热门服务
+		<view>更多<image src="/images/arrowright.png"></image>
+		</view>
+	</view>
+	<view class=" icons-wrap" bindtap="serviceApply">
+		<view class="icon">
+			<image src="/images/index-icon1.png"></image>
+			<view>新闻咨询</view>
+		</view>
+		<view class="icon">
+			<image src="/images/index-icon1.png"></image>
+			<view>新闻咨询</view>
+		</view>
+		<view class="icon">
+			<image src="/images/index-icon1.png"></image>
+			<view>新闻咨询</view>
+		</view>
+		<view class="icon">
+			<image src="/images/index-icon1.png"></image>
+			<view>新闻咨询</view>
+		</view>
+		<view class="icon">
+			<image src="/images/index-icon1.png"></image>
+			<view>新闻咨询</view>
+		</view>
+		<view class="icon">
+			<image src="/images/index-icon-add.png"></image>
+			<view>添加服务</view>
+		</view>
+	</view>
+	<view class="main-tit" bindtap="serviceApply">应用工具
+		<view>更多<image src="/images/arrowright.png"></image>
+		</view>
+	</view>
+	<view class=" icons-wrap" bindtap="serviceApply">
+		<view class="icon">
+			<image src="/images/index-icon1.png"></image>
+			<view>新闻咨询</view>
+		</view>
+		<view class="icon">
+			<image src="/images/index-icon1.png"></image>
+			<view>新闻咨询</view>
+		</view>
+		<view class="icon">
+			<image src="/images/index-icon1.png"></image>
+			<view>新闻咨询</view>
+		</view>
+		<view class="icon">
+			<image src="/images/index-icon1.png"></image>
+			<view>新闻咨询</view>
+		</view>
+		<view class="icon">
+			<image src="/images/index-icon1.png"></image>
+			<view>新闻咨询</view>
+		</view>
+		<view class="icon">
+			<image src="/images/index-icon-add.png"></image>
+			<view>添加工具</view>
+		</view>
+	</view>
+	<view class="main-tit">数据报表中心
+		<view data-cate="1" bindtap="changeCate">更多<image src="/images/arrowright.png"></image>
+		</view>
+	</view>
+	<view class="data-items">
+		<image class="data-item" src="/images/data-report1.png">
+		</image>
+		<image class="data-item" src="/images/data-report2.png">
+		</image>
+		<image class="data-item" src="/images/data-report3.png">
+		</image>
+		<image class="data-item" src="/images/data-report4.png">
+		</image>
+	</view>
+	<view class="main-tit">IT新闻
+		<view bindtap="goNews">更多<image src="/images/arrowright.png"></image>
+		</view>
+	</view>
+	<view class="list-one" wx:for="{{lists}}" wx:key="index" data-id="{{item.article_id}}" bindtap="goDetail">
+		<image class="list-one-img" src="/images/cover-img.png" mode="aspectFill"></image>
+		<view class="list-one-content">
+			<view style="min-height:148rpx">
+				<view class="list-one-title twolist-hidden">{{item.article_title}}
+				</view>
+				<view class="list-one-des twolist-hidden">{{item.article_title}}
+				</view>
+			</view>
+			<view class="list-one-bot">
+				<view class="list-one-time">{{item.view_time}}</view>
+				<view class="list-one-time">
+					<image src="/images/icon-views.png"></image>999
+				</view>
+			</view>
+		</view>
+		<image class="list-collect" src="/images/icon-collect.png"></image>
+	</view>
+	<view class="no-list" wx:if="{{lists.length == 0}}">暂无相关数据</view>
+</view>
+
+
+<view class="lists" wx:if="{{selectCate == 1}}">
+	<view class="list" wx:for="{{lists}}" wx:key="index" data-id="{{item.article_id}}" bindtap="goDetail">
+		<image class="list-img" src="/images/cover-img.png" mode="aspectFill"></image>
+		<view class="list-content">
+			<view class="list-title onelist-hidden">{{item.article_title}}
+			</view>
+			<view class="list-time">{{item.view_time}}</view>
+
+		</view>
+	</view>
+	<view class="no-list" wx:if="{{lists.length == 0}}">暂无相关数据</view>
+</view>

@@ -1,0 +1,77 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/articleDetail/articleDetail",
+    "pages/auth/auth",
+    "pages/contactUs/contactUs",
+    "pages/myCollect/myCollect",
+    "pages/myData/myData",
+    "pages/my/my",
+    "pages/serviceApply/serviceApply",
+    "pages/serviceProcess/serviceProcess",
+    "pages/interaction/interaction",
+    "pages/serviceSubmit/serviceSubmit"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarTitleText": "企业智享服务平台",
+    "navigationBarBackgroundColor": "#F5F5F7",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#4F5DFF",
+    "borderStyle": "black",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/tabbar/index.png",
+        "selectedIconPath": "images/tabbar/index_selected.png"
+      },
+      {
+        "pagePath": "pages/interaction/interaction",
+        "text": "互动",
+        "iconPath": "images/tabbar/interaction.png",
+        "selectedIconPath": "images/tabbar/interaction-selected.png"
+      },
+      {
+        "pagePath": "pages/serviceProcess/serviceProcess",
+        "text": "进程",
+        "iconPath": "images/tabbar/process.png",
+        "selectedIconPath": "images/tabbar/process_selected.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/tabbar/mine.png",
+        "selectedIconPath": "images/tabbar/mine_selected.png"
+      }
+    ],
+    "position": "bottom"
+  },
+<<<<<<< HEAD
+  "usingComponents": {
+    "van-button": "./miniprogram_npm/vant-weapp/button/index",
+    "van-cell": "./miniprogram_npm/vant-weapp/cell/index",
+    "van-field":"./miniprogram_npm/vant-weapp/field/index",
+    "van-area":"./miniprogram_npm/vant-weapp/area/index",
+    "van-checkbox":"./miniprogram_npm/vant-weapp/checkbox/index",
+    "van-datetime":"./miniprogram_npm/vant-weapp/datetime-picker/index",
+    "van-picker":"./miniprogram_npm/vant-weapp/picker/index",
+    "van-radio":"./miniprogram_npm/vant-weapp/radio/index",
+    "van-rate":"./miniprogram_npm/vant-weapp/rate/index",
+    "van-slider":"./miniprogram_npm/vant-weapp/slider/index",
+    "van-tree-select":"./miniprogram_npm/vant-weapp/tree-select/index"
+  },
+=======
+  "usingComponents": {},
+>>>>>>> 2f5c45c8488a9d8a200ab076b907f4e88b466324
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置信息将用作页面的显示效果"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,34 @@
+<view class="process-lists">
+	<view class="process-list" wx:for="{{lists}}" wx:key="index" data-id="{{item.article_id}}" bindtap="goDetail">
+		<view class="process-list-tit dis-flex flex-x-between flex-y-center">
+
+			<view class="process-list-tit-l dis-flex  flex-y-center">
+				<image src="/images/icon-process1.png"></image>
+				<text class="process-list-tit-name">故障报修</text> (AP02112837462)
+			</view>
+			<view class="process-list-tit-r {{index == 0 ? 'finish' : ''}} dis-flex  flex-y-center">
+				<text>·</text> {{index == 0 ? '已完成' : '进行中'}}
+			</view>
+		</view>
+		<view class="process-list-des dis-flex flex-x-between flex-y-center">
+			<view class="process-list-des-l dis-flex flex-y-center">
+				<image src="/images/icon-process2.png"></image>2020-06-09 12:30
+			</view>
+			<view class="process-list-des-r dis-flex  flex-y-center"></view>
+		</view>
+    <view class="process-list-des dis-flex flex-x-between flex-y-center">
+			<view class="process-list-des-l dis-flex flex-y-center">
+				<image src="/images/icon-process3.png"></image>桌面端/办公软件
+			</view>
+			<view class="process-list-des-r dis-flex  flex-y-center"></view>
+		</view>
+    <view class="process-list-des dis-flex flex-x-between flex-y-center">
+			<view class="process-list-des-l dis-flex flex-y-center">
+				<image src="/images/icon-process4.png"></image>0067 于海涛（138 9987 2245）
+			</view>
+			<!-- <view class="process-list-des-r dis-flex  flex-y-center">
+      评价本次服务</view> -->
+		</view>
+	</view>
+	<view class="no-list" wx:if="{{lists.length == 0}}">暂无相关数据</view>
+</view>

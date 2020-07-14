@@ -1,0 +1,102 @@
+
+.card{
+  box-shadow:0px 12rpx 32rpx 0px rgba(0,0,0,0.08);
+  padding: 0rpx 32rpx;
+  background:rgba(255,255,255,1);
+border-radius:8px;
+width: 686rpx;
+  margin: 32rpx auto;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  box-sizing: border-box;
+  position: relative;
+}
+.card image{
+  width: 18rpx;
+  height: 29rpx;
+  
+}
+.panel-between2 image{
+  width: 132rpx;
+  height: 132rpx;
+margin-right: 20rpx;
+}
+
+.panel-between2{
+  height:200rpx;
+display: flex;
+align-items: center;
+flex: 1;
+font-weight: bold;
+}
+.card-right{
+  display: flex;
+  align-items: center;
+  
+}
+.card-right text{
+  display: inline-block;
+  width: 64rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+  text-align: center;
+  background:rgba(15,30,62,0.06);
+  border-radius: 50%;
+  margin-right: 24rpx;
+  color: #000000;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.user{
+  padding: 48rpx 32rpx;
+}
+.user-l{
+  color:rgba(15,30,62,0.5);
+  font-size: 24rpx;
+  flex: 0 0 200rpx;
+}
+.user-l image{
+  width: 176rpx;
+  height: 176rpx;
+  margin-bottom: 48rpx;
+}
+.user-r-name{
+  color:rgba(15,30,62,0.5);
+  font-size: 28rpx;
+  margin-bottom: 30rpx;
+}
+.user-r-name text{
+  font-size: 36rpx;
+  color: #0F1E3E;
+  font-weight: bold;
+  margin-right: 12rpx;
+}
+.user-r-des{
+  color: #0F1E3E;
+  font-size: 26rpx;
+  line-height: 44rpx;
+}
+.user-r-des text{
+ 
+  color:rgba(15,30,62,0.5);
+}
+.content{
+  text-align: center;
+  overflow: hidden;
+}
+.list-contact{
+  width:176rpx;
+height:56rpx;
+line-height: 56rpx;
+display: inline-block;
+color: #fff;
+background:rgba(74,73,246,1);
+box-shadow:0px 6px 8px -5px rgba(74,73,246,0.5);
+border-radius:8px;
+text-align: center;
+font-size: 26rpx;
+margin-bottom: 32rpx;
+}

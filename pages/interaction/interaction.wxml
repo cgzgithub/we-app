@@ -1,0 +1,133 @@
+<view class="search">
+	<view class="cate {{selectCate == 2 ? 'cate-active' : ''}}" data-cate="2" bindtap="changeCate">
+		IT通知
+	</view>
+	<view class="cate {{selectCate == 0 ? 'cate-active' : ''}}" data-cate="0" bindtap="changeCate">
+		IT新闻
+	</view>
+	<view class="cate {{selectCate == 1 ? 'cate-active' : ''}}" data-cate="1" bindtap="changeCate">
+		IT知识库
+	</view>
+	<view class='b_center_search'>
+		<image src='../../images/search.png' class='p_search_img'></image>
+		<input class='p_search_input' style="width:100%;" maxlength='40' value="{{search}}" bindinput="searchInput" placeholder='请输入关键词' confirm-type="search" bindconfirm="searchShop"></input>
+	</view>
+</view>
+<!-- it通知start -->
+<view class="lists"  wx:if="{{selectCate == 2}}">
+	<view class="msg-list">
+		<image src="/images/icon-msg1.png"></image>
+		<view class="msg-content">
+			<view class="msg-tit">服务通知<view class="msg-time">2020-06-05 20:45</view>
+			</view>
+			<view class="msg-des">您的服务预约将由 0067 于海涛（138 9987 2245） 为您提供服务，他将于15分钟内到达您的座位，请耐心等候，谢谢！</view>
+		</view>
+	</view>
+	<view class="msg-list">
+		<image src="/images/icon-msg2.png"></image>
+		<view class="msg-content">
+			<view class="msg-tit">系统通知<view class="msg-time">2020-06-05 20:45</view>
+			</view>
+			<view class="msg-des">您的服务预约将由 0067 于海涛（138 9987 2245） 为您提供服务，他将于15分钟内到达您的座位，请耐心等候，谢谢！</view>
+		</view>
+	</view>
+	<view class="msg-list">
+		<image src="/images/icon-msg3.png"></image>
+		<view class="msg-content">
+			<view class="msg-tit">领取通知<view class="msg-time">2020-06-05 20:45</view>
+			</view>
+			<view class="msg-des">您的服务预约将由 0067 于海涛（138 9987 2245） 为您提供服务，他将于15分钟内到达您的座位，请耐心等候，谢谢！</view>
+		</view>
+	</view>
+</view>
+<!-- it通知 -->
+<!-- it新闻start -->
+<view class="lists" wx:if="{{selectCate == 0}}">
+	<block wx:for="{{lists}}" wx:key="index">
+		<!-- it新闻第一条start -->
+		<view class="list-one-first" wx:if="{{index == 0}}" data-id="{{item.article_id}}" bindtap="goDetail">
+			<view class="list-one-title twolist-hidden">{{item.article_title}}
+			</view>
+			<image class="list-one-first-img" src="/images/cover-img.png" mode="aspectFill"></image>
+			<view class="list-one-content">
+
+				<view class="list-one-des twolist-hidden">{{item.article_title}}
+				</view>
+				<view class="list-one-bot" style="margin-top:24rpx">
+					<view class="list-one-time">{{item.view_time}}</view>
+					<view class="list-one-time">
+						<image src="/images/icon-views.png"></image>999
+					</view>
+				</view>
+			</view>
+			<image class="list-collect" src="/images/icon-collect.png"></image>
+		</view>
+		<!-- it新闻第一条 -->
+		<view class="list-one" wx:else data-id="{{item.article_id}}" bindtap="goDetail">
+			<image class="list-one-img" src="/images/cover-img.png" mode="aspectFill"></image>
+			<view class="list-one-content">
+				<view style="min-height:148rpx">
+					<view class="list-one-title twolist-hidden">{{item.article_title}}
+					</view>
+					<view class="list-one-des twolist-hidden">{{item.article_title}}
+					</view>
+				</view>
+				<view class="list-one-bot">
+					<view class="list-one-time">{{item.view_time}}</view>
+					<view class="list-one-time">
+						<image src="/images/icon-views.png"></image>999
+					</view>
+				</view>
+			</view>
+			<image class="list-collect" src="/images/icon-collect.png"></image>
+		</view>
+	</block>
+
+	<view class="no-list" wx:if="{{lists.length == 0}}">暂无相关数据</view>
+</view>
+<!-- it新闻 -->
+<!-- it知识库start -->
+<view class="lists" wx:if="{{selectCate == 1}}">
+	<!-- it知识库头部start -->
+	<view class="list-top-news" wx:for="{{lists}}" wx:if="{{index == 0}}" wx:key="index" data-id="{{item.article_id}}" bindtap="goDetail">
+		<image class="list-top-img" src="/images/cover-img.png" mode="aspectFill"></image>
+		<view class="list-top-content">
+			<view class="list-two-title onelist-hidden">{{item.article_title}}222
+			</view>
+			<view class="list-two-bot">
+				<view class="list-one-time">{{item.article_title}}</view>
+				<view class="list-one-time">
+					<image src="/images/icon-views.png"></image>999
+				</view>
+
+			</view>
+		</view>
+	</view>
+	<!-- it知识库头部 -->
+	<view class="main-tit">应用工具 <view class="sorts">
+			<view class="sort {{selectSort == 0 ? 'sort-active' : ''}}" data-sort="0" bindtap="changeSort">
+				最热门
+			</view>
+			<view class="sort {{selectSort == 1 ? 'sort-active' : ''}}" data-sort="1" bindtap="changeSort">
+				最新
+			</view>
+		</view>
+	</view>
+	<view class="list-two" wx:for="{{lists}}" wx:key="index" data-id="{{item.article_id}}" bindtap="goDetail">
+		<image class="list-two-img" src="/images/cover-img.png" mode="aspectFill"></image>
+		<view class="list-two-content">
+			<view class="list-two-title onelist-hidden">{{item.article_title}}222
+			</view>
+			<view class="list-two-bot">
+				<view class="list-two-type" wx:if="{{item.category.name}}">{{item.category.name}}</view>
+				<view class="list-one-time">
+					<image src="/images/icon-views.png"></image>999
+				</view>
+
+			</view>
+		</view>
+		<image class="list-collect" src="/images/icon-collected.png"></image>
+	</view>
+	<view class="no-list" wx:if="{{lists.length == 0}}">暂无相关数据</view>
+</view>
+<!-- it知识库 -->

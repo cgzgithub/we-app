@@ -1,0 +1,91 @@
+<view class="form-wrap">
+
+	<view class="item-wrap">
+		<view class="item-key">
+			服务名称
+		</view>
+		<view class="item-value">
+			<input class="job-name" bindinput="bindKeyInput" placeholder="请输入服务名称" />
+		</view>
+	</view>
+  <view class="item-wrap">
+		<view class="item-key">
+			服务功能
+		</view>
+		<view class="item-value">
+			<picker bindchange="bindPickerChange" value="{{index}}" range="{{infos}}">
+				<input class="item-input" value="{{infos[index]}}" placeholder="请选择服务功能" disabled="true"></input>
+				<image src="/images/arrowright.png"></image>
+			</picker>
+
+		</view>
+	</view>
+  <view class="item-wrap">
+		<view class="item-key">
+			功能内容
+		</view>
+		<view class="item-value">
+			<picker bindchange="bindPickerChange" value="{{index}}" range="{{infos}}">
+				<input class="item-input" value="{{infos[index]}}" placeholder="请选择功能内容" disabled="true"></input>
+				<image src="/images/arrowright.png"></image>
+			</picker>
+
+		</view>
+	</view>
+  <view class="item-wrap">
+		<view class="item-key">
+			功能描述
+		</view>
+		<view class="item-value">
+			<picker bindchange="bindPickerChange" value="{{index}}" range="{{infos}}">
+				<input class="item-input" value="{{infos[index]}}" placeholder="功能描述" disabled="true"></input>
+				<image src="/images/arrowright.png"></image>
+			</picker>
+
+		</view>
+	</view>
+	<view class="item-wrap">
+		<view class="item-key">
+			备注
+		</view>
+		<view class="item-value">
+			<textarea bindinput="bindKeyInput"></textarea>
+		</view>
+	</view>
+
+  <view class="item-wrap">
+		<view class="item-key">
+			申请人
+		</view>
+		<view class="item-value">
+			<input class="job-name" bindinput="bindKeyInput" placeholder="请输入申请人" />
+		</view>
+	</view>
+  <view class="item-wrap">
+		<view class="item-key">
+			部门
+		</view>
+		<view class="item-value">
+			<input class="job-name" bindinput="bindKeyInput" placeholder="请输入部门" />
+		</view>
+	</view>
+  <view class="item-wrap">
+		<view class="item-key">
+			公司名称
+		</view>
+		<view class="item-value">
+			<input class="job-name" bindinput="bindKeyInput" placeholder="请输入公司名称" />
+		</view>
+	</view>
+<view class="item-wrap">
+		<view class="item-key">
+			申请时间
+		</view>
+		<view class="item-value">
+			<input class="job-name" bindinput="bindKeyInput" placeholder="请输入申请时间" />
+		</view>
+	</view>
+  <view class="scanCode fo-32" bindtap="publish">确认提交</view>
+</view>
+
+

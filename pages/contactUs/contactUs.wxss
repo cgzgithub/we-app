@@ -1,0 +1,119 @@
+.main-tit {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 1);
+  padding-left: 32rpx;
+  margin: 20rpx 0rpx 20rpx 0rpx;
+}
+.scroll-view_H {
+  width: calc(100% - 32rpx);
+  white-space: nowrap;
+  height: 420rpx;
+  margin: 0rpx 16rpx;
+
+}
+
+.list-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  flex: 0 0 128rpx;
+}
+
+.list-x {
+  display: inline-block;
+  margin: 0rpx 16rpx;
+  box-sizing: border-box;
+
+  color: rgba(15, 30, 62, 1);
+  font-size: 30rpx;
+  text-align: center;
+  width: 248rpx;
+  padding: 24rpx 0rpx 32rpx 0rpx;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 4px 14px -8px rgba(15, 30, 62, 0.22);
+  border-radius: 8px;
+}
+.list-x-name{
+  margin: 18rpx auto 4rpx auto;
+  font-weight: 600;
+}
+.list-x-namecn{
+  font-size:24rpx;
+font-weight:400;
+color:rgba(15,30,62,1);
+margin-bottom: 4rpx;
+}
+.list-x-job{
+  color:rgba(130,138,168,1);
+  font-size: 20rpx;
+  padding: 0rpx 4rpx;
+  background:rgba(236,239,248,1);
+border-radius:2px;
+height: 28rpx;
+line-height: 28rpx;
+display: inline-block;
+font-weight: normal;
+margin-bottom: 14rpx;
+}
+.list-contact{
+  width:176rpx;
+height:56rpx;
+line-height: 56rpx;
+display: inline-block;
+color: #fff;
+background:rgba(74,73,246,1);
+box-shadow:0px 6px 8px -5px rgba(74,73,246,0.5);
+border-radius:8px;
+text-align: center;
+font-size: 26rpx;
+}
+.list-y{
+  margin: 16rpx 32rpx;
+background:rgba(255,255,255,1);
+border-radius:8px;
+box-sizing: border-box;
+padding: 16rpx;
+padding-bottom: 24rpx;
+position: relative;
+}
+.list-y .list-avatar{
+  flex: 0 0 112rpx;
+  height: 112rpx;
+  width: 112rpx;
+  margin-right: 16rpx;
+}
+.list-y-right{
+  flex: 1;
+  box-sizing: border-box;
+  padding-right: 60rpx;
+}
+.list-zan{
+  position: absolute;
+  top: 16rpx;
+  right: 16rpx;
+  font-size: 30rpx;
+  color: #000;
+  display: flex;
+  align-items: center;
+}
+.list-zan image{
+  width: 48rpx;
+  height: 48rpx;
+  margin-right: 8rpx;
+}
+.list-y-name{
+  margin-top: 6rpx;
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.list-y-name text{
+  color:rgba(0,0,0,0.5);
+  margin-left: 16rpx;
+  font-size: 26rpx;
+  font-weight: normal;
+}
+.list-y-job{
+  margin: 24rpx 0rpx 24rpx 0rpx;
+  color:rgba(0,0,0,0.5);
+  font-size: 26rpx;
+}
