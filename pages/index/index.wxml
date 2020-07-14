@@ -8,8 +8,8 @@
     border="{{ false }}"
     bind:change="onChange"
   	/>
-	  <van-radio-group value="{{ item.name }}" wx:for="{{radioArr}}" wx:key="index" bind:change="radioChange" id="{{item.id}}">
-		<van-radio name="{{ item.value }}" wx:for="{{item.dicData}}" wx:key="index">{{item.label}}</van-radio>
+	  <van-radio-group value="{{item.valueDefault}}" wx:for="{{radioArr}}" wx:key="index" bind:change="radioChange" id="{{item.id}}">
+		<van-radio name="{{item.value}}" wx:for="{{item.dicData}}" wx:key="index">{{item.label}}</van-radio>
 		</van-radio-group>
 	  <van-rate wx:for="{{rateArr}}" wx:key="index">rate</van-rate>
 	  <van-slider>slider</van-slider>

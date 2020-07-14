@@ -318,7 +318,13 @@ Page({
     console.log(v)
   },
   radioChange(v){
-    console.log('radioChange',v)
+    console.log('radioChange',v);
+    let index = parseInt(v.currentTarget.id)
+    this.data.radioArr[index].valueDefault = v.detail;
+    let curData = this.data.radioArr
+    this.setData({
+      radioArr:curData
+    })
   },
   showPicker(e) {
     console.log(e)
@@ -411,8 +417,8 @@ Page({
           })
           break;
         case "radio":
-          item.radioId = radioId++;
-          item.name = 1;
+          item.id = radioId++;
+          item.valueDefault = "1";
           radioJson.push(item)
           that.setData({
             radioArr:radioJson
